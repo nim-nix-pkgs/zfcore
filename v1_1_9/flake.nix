@@ -7,11 +7,11 @@
   inputs.flakeNimbleLib.type  = "github";
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
-  inputs.src-zfcore-v1_0_2.flake = false;
-  inputs.src-zfcore-v1_0_2.ref   = "refs/tags/v1.0.2";
-  inputs.src-zfcore-v1_0_2.owner = "zendbit";
-  inputs.src-zfcore-v1_0_2.repo  = "nim.zfcore";
-  inputs.src-zfcore-v1_0_2.type  = "github";
+  inputs.src-zfcore-v1_1_9.flake = false;
+  inputs.src-zfcore-v1_1_9.ref   = "refs/tags/v1.1.9";
+  inputs.src-zfcore-v1_1_9.owner = "zendbit";
+  inputs.src-zfcore-v1_1_9.repo  = "nim.zfcore";
+  inputs.src-zfcore-v1_1_9.type  = "github";
   
   inputs."zfblast".owner = "nim-nix-pkgs";
   inputs."zfblast".ref   = "master";
@@ -29,16 +29,32 @@
   inputs."uri3".inputs.nixpkgs.follows = "nixpkgs";
   inputs."uri3".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
   
+  inputs."stdext".owner = "nim-nix-pkgs";
+  inputs."stdext".ref   = "master";
+  inputs."stdext".repo  = "stdext";
+  inputs."stdext".dir   = "v0_0_13";
+  inputs."stdext".type  = "github";
+  inputs."stdext".inputs.nixpkgs.follows = "nixpkgs";
+  inputs."stdext".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
+  
+  inputs."zip".owner = "nim-nix-pkgs";
+  inputs."zip".ref   = "master";
+  inputs."zip".repo  = "zip";
+  inputs."zip".dir   = "0_3_1";
+  inputs."zip".type  = "github";
+  inputs."zip".inputs.nixpkgs.follows = "nixpkgs";
+  inputs."zip".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
+  
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
   let 
     lib  = flakeNimbleLib.lib;
-    args = ["self" "nixpkgs" "flakeNimbleLib" "src-zfcore-v1_0_2"];
+    args = ["self" "nixpkgs" "flakeNimbleLib" "src-zfcore-v1_1_9"];
     over = if builtins.pathExists ./override.nix 
            then { override = import ./override.nix; }
            else { };
   in lib.mkRefOutput (over // {
     inherit self nixpkgs ;
-    src  = deps."src-zfcore-v1_0_2";
+    src  = deps."src-zfcore-v1_1_9";
     deps = builtins.removeAttrs deps args;
     meta = builtins.fromJSON (builtins.readFile ./meta.json);
   } );
