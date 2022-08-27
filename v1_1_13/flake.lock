@@ -37,7 +37,7 @@
       "inputs": {
         "flakeNimbleLib": "flakeNimbleLib",
         "nixpkgs": "nixpkgs",
-        "src-zfcore-master": "src-zfcore-master",
+        "src-zfcore-v1_1_13": "src-zfcore-v1_1_13",
         "stdext": "stdext",
         "uri3": "uri3",
         "zfblast": "zfblast",
@@ -158,7 +158,7 @@
         "type": "github"
       }
     },
-    "src-zfcore-master": {
+    "src-zfcore-v1_1_13": {
       "flake": false,
       "locked": {
         "lastModified": 1660976590,
@@ -170,7 +170,7 @@
       },
       "original": {
         "owner": "zendbit",
-        "ref": "refs/heads/master",
+        "ref": "refs/tags/v1.1.13",
         "repo": "nim.zfcore",
         "type": "github"
       }
