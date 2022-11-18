@@ -199,6 +199,30 @@
   inputs."zfcore-v1_1_15".inputs.nixpkgs.follows = "nixpkgs";
   inputs."zfcore-v1_1_15".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
   
+  inputs."zfcore-v1_1_16".dir   = "v1_1_16";
+  inputs."zfcore-v1_1_16".owner = "nim-nix-pkgs";
+  inputs."zfcore-v1_1_16".ref   = "master";
+  inputs."zfcore-v1_1_16".repo  = "zfcore";
+  inputs."zfcore-v1_1_16".type  = "github";
+  inputs."zfcore-v1_1_16".inputs.nixpkgs.follows = "nixpkgs";
+  inputs."zfcore-v1_1_16".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
+  
+  inputs."zfcore-v1_1_17".dir   = "v1_1_17";
+  inputs."zfcore-v1_1_17".owner = "nim-nix-pkgs";
+  inputs."zfcore-v1_1_17".ref   = "master";
+  inputs."zfcore-v1_1_17".repo  = "zfcore";
+  inputs."zfcore-v1_1_17".type  = "github";
+  inputs."zfcore-v1_1_17".inputs.nixpkgs.follows = "nixpkgs";
+  inputs."zfcore-v1_1_17".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
+  
+  inputs."zfcore-v1_1_18".dir   = "v1_1_18";
+  inputs."zfcore-v1_1_18".owner = "nim-nix-pkgs";
+  inputs."zfcore-v1_1_18".ref   = "master";
+  inputs."zfcore-v1_1_18".repo  = "zfcore";
+  inputs."zfcore-v1_1_18".type  = "github";
+  inputs."zfcore-v1_1_18".inputs.nixpkgs.follows = "nixpkgs";
+  inputs."zfcore-v1_1_18".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
+  
   inputs."zfcore-v1_1_5".dir   = "v1_1_5";
   inputs."zfcore-v1_1_5".owner = "nim-nix-pkgs";
   inputs."zfcore-v1_1_5".ref   = "master";
